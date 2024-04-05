@@ -120,7 +120,7 @@ document.addEventListener('drop', function(event) {
 function checkWord(){
     
     if (letters.every((value, index) => value === test_word[index])) {
-        finishGame(100);
+        finishGame(200);
     }
     else{
         finishGame(0);
