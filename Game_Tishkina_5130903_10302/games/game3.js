@@ -159,18 +159,6 @@ const displayTimer = document.querySelector('#timer')
 function finishGame(score) {
 
     blocked = true
-    // clearInterval(intervalId)
-
-    // score = 100;
-
-    // if (currentTime <= 500) {
-    //     score = 200
-    // } else if (currentTime <= 1000) {
-    //     score = 100
-    // }
-
-
-    // displayTimer.remove()
     const timewatch = document.querySelector('.timewatch')
     timewatch.innerHTML  = `Your score ${score}!`
 
