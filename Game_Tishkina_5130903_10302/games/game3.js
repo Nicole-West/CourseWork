@@ -54,7 +54,7 @@ quizContainer.style.gridTemplateColumns = str;
 for (let i = 0; i < letters.length; i++) {
     const li = document.createElement("li")        
     li.classList.add("quiz-letter")
-    li.classList.add("letter-i")//
+    li.classList.add("letter-i")
     // li.innerText = letters[i]
     li.dataset.value = "droptarget"
     quizContainer.appendChild(li)
@@ -100,10 +100,6 @@ document.addEventListener('drop', function(event) {
         return
     }
 
-    // if (event.target.innerText !== dragged.innerText) {
-    //     return
-    // }
-
     event.target.classList.remove('quiz-letter')
     event.target.classList.add('quiz-letter-done')
     event.target.innerText = dragged.innerText;
@@ -132,29 +128,7 @@ function checkWord(){
     }
 }
 
-// let currentTime = 0
-// const gameTime = localStorage.getItem("gameTime")
-// console.log(gameTime)
 const displayTimer = document.querySelector('#timer')
-
-// const intervalId = setInterval(() => {
-//     currentTime++
-    
-//     if (currentTime >= gameTime) {   
-//      finishGame(0) 
-//     }
- 
-//     const time = gameTime - currentTime
-//     const hours = Math.floor(time / 360000)
-//     const minutes = Math.floor((time % 360000) / 6000)
-//     const seconds = Math.floor((time % 6000) / 100)
-//     const milliseconds = time % 100
-//     const timeToString = `${hours}:${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}:${milliseconds.toString().padStart(2, "0")}`
- 
-//     displayTimer.textContent = timeToString
-   
-//  }, 10) 
- 
 
 function finishGame(score) {
 
